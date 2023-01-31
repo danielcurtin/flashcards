@@ -26,9 +26,7 @@ describe('Turn', () => {
     });
 
     it('should be able to return the guess', () => {
-        const guess = turn.returnGuess();
-
-        expect(guess).to.equal('array');
+        expect(turn.returnGuess()).to.equal('array');
     });
 
     it('should be able to return the card', () => {
@@ -38,7 +36,7 @@ describe('Turn', () => {
     it('should be able to check if the guess is correct', () => {
         expect(turn.evaluateGuess()).to.equal(false);
 
-        turn = new Turn(card, 'object');
+        turn.guess = 'object';
 
         expect(turn.evaluateGuess()).to.equal(true);
     });
@@ -46,7 +44,7 @@ describe('Turn', () => {
     it('should give feedback on the guess', () => {
         expect(turn.giveFeedback()).to.equal('incorrect!');
 
-        turn = new Turn(card, 'object');
+        turn.guess = 'object';
 
         expect(turn.giveFeedback()).to.equal('correct!');
     });

@@ -22,7 +22,7 @@ describe('Deck', () => {
         expect(deck).to.be.an.instanceOf(Deck);
     });
 
-    it('should store an array of objects', () => {
+    it('should store an array of card instances', () => {
         expect(deck.cards).to.deep.equal([card1, card2, card3]);
     });
 

@@ -3,7 +3,6 @@ const expect = chai.expect;
 
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
-const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
 describe('Round', () => {
@@ -48,6 +47,8 @@ describe('Round', () => {
 
     it('should record the id of incorrect guesses in an array', () => {
         round.takeTurn(guess);
+
+        expect(round.incorrectGuesses).to.deep.equal([1]);
 
         guess = 'object';
 
