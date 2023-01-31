@@ -8,8 +8,8 @@ const Round = require('./Round');
 const { prototype } = require('mocha');
 
 class Game {
-  constructor(currentRound) {
-    this.currentRound = currentRound;
+  constructor() {
+    this.currentRound = undefined;
   };
 
   printMessage(deck) {
@@ -27,9 +27,11 @@ class Game {
     });
     const newDeck = new Deck(newCards);
     const newRound = new Round(newDeck);
-
-    this.printMessage(newRound.deck);
-    this.printQuestion();
+    
+    this.currentRound = newRound;
+    
+    this.printMessage(this.currentRound.deck);
+    this.printQuestion(this.currentRound);
   };
 };
 
