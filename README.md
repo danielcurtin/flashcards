@@ -1,71 +1,27 @@
-# FlashCards Starter Kit
+<h1 align="center">Flashcards</h1>
 
-## Fork This Repo
-
-On the top right corner of this page, click the **Fork** button.
-
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Your project is running...
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
-## Where to Add Your Code
-
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+## Abstract
+This app is a flashcard review game that runs on the command line. The user gets to run a trivia-like game where they can see a bunch of multiple choice questions, take guesses, see if they were right or wrong after each question, and see a final score at the end.
 
 ---
 
-## Test Files Organization
+![Screen Recording 2023-02-01 at 4 18 31 PM](https://user-images.githubusercontent.com/114776048/216190170-ac81ccab-a4e7-417c-b174-8ef234e0900c.gif)
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
+## Tech Used
+- GitHub
+- Git
+- Javascript
+- Terminal
+- VS Code
 
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
+## Setup
+Clone down the repo by pasting the below into your command line
 ```bash
-npm test
+git clone git@github.com:danielcurtin/flashcards.git
 ```
 
-The test results will output to the terminal.
+`cd flashcards` to navigate into the directory.
 
+Run `node index.js` from the root of the project to start the game.
 
+Use your arrow keys to navigate the choices, and enter to select the choice.
