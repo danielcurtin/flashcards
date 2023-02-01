@@ -20,16 +20,21 @@ class Game {
   };
 
   start() {
-    const newCards = data.prototypeData.map((element) => {
-      return new Card(element.id, element.question, element.answers, element.correctAnswer);
-    });
-    const newDeck = new Deck(newCards);
-    const newRound = new Round(newDeck);
-    
-    this.currentRound = newRound;
-    
+    this.currentRound = this.createRound();
     this.printMessage(this.currentRound.deck);
     this.printQuestion(this.currentRound);
+  };
+  
+  createRound() {
+    return new Round(this.createDeck());
+  };
+    
+  createDeck() {
+    return new Deck(this.createCards());
+  };
+    
+  createCards() {
+    return data.prototypeData.map(element => new Card(element.id, element.question, element.answers, element.correctAnswer));
   };
 };
 
